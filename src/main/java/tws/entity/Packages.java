@@ -4,25 +4,19 @@ public class Packages {
     private String  waybillNum;   // 运单号
     private String  recipients;  //收件人
     private String  phoneNum;  //电话
-    private String  status;  //状态
+    private int   status;  //状态
     private String  appointTime;  //预约时间
     private double weight;  // 重量
     public Packages() {
     }
 
-    public Packages(String waybillNum, String recipients, String phoneNum, double weight) {
-        this.waybillNum = waybillNum;
-        this.recipients = recipients;
-        this.phoneNum = phoneNum;
-        this.weight = weight;
-    }
-
-    public Packages(String waybillNum, String recipients, String phoneNum, String status, String appointTime) {
+    public Packages(String waybillNum, String recipients, String phoneNum, int status, String appointTime, double weight) {
         this.waybillNum = waybillNum;
         this.recipients = recipients;
         this.phoneNum = phoneNum;
         this.status = status;
         this.appointTime = appointTime;
+        this.weight = weight;
     }
 
     public double getWeight() {
@@ -57,11 +51,11 @@ public class Packages {
         this.phoneNum = phoneNum;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
